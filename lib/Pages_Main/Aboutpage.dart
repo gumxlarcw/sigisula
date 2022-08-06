@@ -45,8 +45,7 @@ class _AboutScreenState extends State<AboutScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
-                                Text('SIPADU 8203 ver 0.3',
-                                    style: mTentangStyle),
+                                Text('SIGISULA 1.0', style: mTentangStyle),
                                 SizedBox(height: 10),
                                 Container(
                                   constraints: new BoxConstraints(
