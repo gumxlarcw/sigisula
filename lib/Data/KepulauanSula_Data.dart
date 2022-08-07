@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class DataPendudukSula {
   DataPendudukSula({this.x, this.y});
   final String x;
@@ -12,7 +10,7 @@ class DataPESula {
   final double y;
 }
 
-var PendudukSula = [
+var penduduksula = [
   DataPendudukSula(x: 'Sanana', y: 34642),
   DataPendudukSula(x: 'Mangoli Utara', y: 9372),
   DataPendudukSula(x: 'Sanana Utara', y: 7764),
@@ -27,7 +25,7 @@ var PendudukSula = [
   DataPendudukSula(x: 'Sulabesi Timur', y: 4450),
 ];
 
-var PESula = [
+var pesula = [
   DataPESula(2017, 4.83),
   DataPESula(2018, 5.57),
   DataPESula(2019, 6.15),

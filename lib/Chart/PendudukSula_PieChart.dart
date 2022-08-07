@@ -10,7 +10,7 @@ class KepsulPenduduk extends StatelessWidget {
             child: Container(
                 child: SfCircularChart(series: <CircularSeries>[
       PieSeries<DataPendudukSula, String>(
-          dataSource: PendudukSula,
+          dataSource: penduduksula,
           xValueMapper: (DataPendudukSula data, _) => data.x,
           yValueMapper: (DataPendudukSula data, _) => data.y,
           dataLabelMapper: (DataPendudukSula data, _) => data.x,

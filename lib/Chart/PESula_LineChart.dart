@@ -11,7 +11,7 @@ class PESulaScreen extends StatelessWidget {
                 child: SfCartesianChart(series: <ChartSeries>[
       // Renders line chart
       LineSeries<DataPESula, int>(
-          dataSource: PESula,
+          dataSource: pesula,
           xValueMapper: (DataPESula data, _) => data.x,
           yValueMapper: (DataPESula data, _) => data.y)
     ]))));
