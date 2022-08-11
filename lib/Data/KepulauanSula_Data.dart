@@ -4,10 +4,12 @@ class DataPendudukSula {
   final num y;
 }
 
-class DataPESula {
-  DataPESula(this.x, this.y);
-  final int x;
-  final double y;
+class DataPE {
+  DataPE(this.tahun, this.sula, this.malut, this.indo);
+  final String tahun;
+  final double sula;
+  final double malut;
+  final double indo;
 }
 
 var penduduksula = [
@@ -25,10 +27,11 @@ var penduduksula = [
   DataPendudukSula(x: 'Sulabesi Timur', y: 4450),
 ];
 
-var pesula = [
-  DataPESula(2017, 4.83),
-  DataPESula(2018, 5.57),
-  DataPESula(2019, 6.15),
-  DataPESula(2020, 0.11),
-  DataPESula(2021, 1.34),
+var pe = [
+  DataPE('2016', 5.11, 5.77, 5.03),
+  DataPE('2017', 4.83, 7.67, 5.07),
+  DataPE('2018', 5.57, 7.86, 5.17),
+  DataPE('2019', 6.15, 6.25, 5.02),
+  DataPE('2020', 0.11, 5.35, -2.07),
+  DataPE('2021', 1.34, 16.40, 3.69),
 ];
