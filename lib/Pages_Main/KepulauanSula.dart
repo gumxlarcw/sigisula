@@ -5,6 +5,8 @@ import 'package:sipadu8203/constant/style_constant.dart';
 import 'package:sipadu8203/main.dart';
 import 'package:sipadu8203/Chart/Penduduk_PieChart.dart';
 import 'package:sipadu8203/constant/ScrollingText.dart';
+import 'package:sipadu8203/Chart/Tematik.dart';
+import 'package:syncfusion_flutter_maps/maps.dart';
 
 class KepulauanSula extends StatefulWidget {
   @override
@@ -277,7 +279,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                       context,
                                                       MaterialPageRoute(
                                                           builder: (context) =>
-                                                              KepsulPenduduk()));
+                                                              Tematik()));
                                                 },
                                                 child: Container(
                                                   height: 40,

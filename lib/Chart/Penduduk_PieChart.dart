@@ -6,28 +6,56 @@ class KepsulPenduduk extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Center(
+        body: Container(
             child: Container(
-                child: SfCircularChart(series: <CircularSeries>[
-      PieSeries<DataPendudukSula, String>(
-          dataSource: penduduksula,
-          xValueMapper: (DataPendudukSula data, _) => data.x,
-          yValueMapper: (DataPendudukSula data, _) => data.y,
-          dataLabelMapper: (DataPendudukSula data, _) => data.x,
-          explodeGesture: ActivationMode.singleTap,
-          radius: '60%',
-          // Segments will explode on tap
-          explode: true,
-          explodeOffset: '15%',
-          // First segment will be exploded on initial rendering
-          explodeIndex: 1,
-          dataLabelSettings: DataLabelSettings(
-              isVisible: true,
-              // Avoid labels intersection
-              labelIntersectAction: LabelIntersectAction.shift,
-              labelPosition: ChartDataLabelPosition.outside,
-              connectorLineSettings: ConnectorLineSettings(
-                  type: ConnectorType.curve, length: '40%')))
-    ]))));
+                margin: EdgeInsets.only(
+                  top: 2,
+                  right: 2,
+                  left: 2,
+                ),
+                child: SfCircularChart(
+                    tooltipBehavior: TooltipBehavior(
+                      enable: true,
+                      activationMode: ActivationMode.singleTap,
+                    ),
+                    title: ChartTitle(
+                        text: 'Penduduk Kabupaten Kepulauan Sula Tahun 2021',
+                        borderWidth: 10,
+                        // Aligns the chart title to left
+                        alignment: ChartAlignment.center,
+                        textStyle: TextStyle(
+                          color: Colors.black,
+                          fontFamily: 'Roboto',
+                          fontStyle: FontStyle.normal,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 15,
+                        )),
+                    legend: Legend(
+                        isVisible: true,
+                        alignment: ChartAlignment.center,
+                        overflowMode: LegendItemOverflowMode.wrap,
+                        position: LegendPosition.bottom,
+                        title: LegendTitle(
+                            text: 'Kecamatan',
+                            textStyle: TextStyle(
+                                color: Colors.red,
+                                fontSize: 15,
+                                fontStyle: FontStyle.italic,
+                                fontWeight: FontWeight.w500))),
+                    series: <CircularSeries>[
+                      PieSeries<DataPendudukSula, String>(
+                        dataSource: penduduksula,
+                        xValueMapper: (DataPendudukSula data, _) => data.x,
+                        yValueMapper: (DataPendudukSula data, _) => data.y,
+                        dataLabelMapper: (DataPendudukSula data, _) => data.x,
+                        explodeGesture: ActivationMode.singleTap,
+                        radius: '95%',
+                        // Segments will explode on tap
+                        explode: true,
+                        explodeOffset: '10%',
+                        // First segment will be exploded on initial rendering
+                        explodeIndex: 1,
+                      )
+                    ]))));
   }
 }
