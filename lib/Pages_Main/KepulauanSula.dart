@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sipadu8203/Chart/PESula_LineChart.dart';
+import 'package:sipadu8203/Chart/PE_LineChart.dart';
 import 'package:sipadu8203/constant/style_constant.dart';
 import 'package:sipadu8203/main.dart';
-import 'package:sipadu8203/Chart/PendudukSula_PieChart.dart';
+import 'package:sipadu8203/Chart/Penduduk_PieChart.dart';
 import 'package:sipadu8203/constant/ScrollingText.dart';
 
 class KepulauanSula extends StatefulWidget {
@@ -82,6 +82,26 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.end,
                                               children: <Widget>[
+                                                Column(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .center,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment.end,
+                                                    children: <Widget>[
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                    .only(
+                                                                left: 4,
+                                                                bottom: 3),
+                                                        child: Icon(
+                                                          Icons.arrow_upward,
+                                                          color: Colors.green,
+                                                          size: 25,
+                                                        ),
+                                                      ),
+                                                    ]),
                                                 Column(
                                                     mainAxisAlignment:
                                                         MainAxisAlignment
@@ -406,6 +426,26 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.end,
                                               children: <Widget>[
+                                                Column(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .center,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment.end,
+                                                    children: <Widget>[
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                    .only(
+                                                                left: 4,
+                                                                bottom: 3),
+                                                        child: Icon(
+                                                          Icons.arrow_upward,
+                                                          color: Colors.green,
+                                                          size: 25,
+                                                        ),
+                                                      ),
+                                                    ]),
                                                 Column(
                                                     mainAxisAlignment:
                                                         MainAxisAlignment
@@ -747,6 +787,26 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                                     .only(
                                                                 left: 4,
                                                                 bottom: 3),
+                                                        child: Icon(
+                                                          Icons.arrow_downward,
+                                                          color: Colors.green,
+                                                          size: 25,
+                                                        ),
+                                                      ),
+                                                    ]),
+                                                Column(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .center,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment.end,
+                                                    children: <Widget>[
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                    .only(
+                                                                left: 4,
+                                                                bottom: 3),
                                                         child: Text('2,78',
                                                             textAlign: TextAlign
                                                                 .center,
@@ -1075,7 +1135,27 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                                     .only(
                                                                 left: 4,
                                                                 bottom: 3),
-                                                        child: Text('8,36',
+                                                        child: Icon(
+                                                          Icons.arrow_downward,
+                                                          color: Colors.green,
+                                                          size: 25,
+                                                        ),
+                                                      ),
+                                                    ]),
+                                                Column(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .center,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment.end,
+                                                    children: <Widget>[
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                    .only(
+                                                                left: 4,
+                                                                bottom: 3),
+                                                        child: Text('8,23',
                                                             textAlign: TextAlign
                                                                 .center,
                                                             style:
@@ -1095,7 +1175,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                                     .only(
                                                                 left: 4,
                                                                 bottom: 3),
-                                                        child: Text('Ribu Jiwa',
+                                                        child: Text('Persen',
                                                             textAlign: TextAlign
                                                                 .center,
                                                             style:
@@ -1148,7 +1228,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                   height: 15,
                                   child: ScrollingText(
                                     text:
-                                        'Persentase Penduduk Miskin di Kabupaten Kepulauan Sula pada Tahun 2021 adalah 8,23 persen',
+                                        'Persentase Penduduk Miskin di Kabupaten Kepulauan Sula pada Tahun 2021 adalah 8,23 Persen, sedangkan Jumlah Penduduk Miskin di Kabupaten Kepulauan Sula pada Tahun 2021 adalah 8,36 Ribu Jiwa',
                                     textStyle: TextStyle(fontSize: 12),
                                     scrollAxis: Axis.horizontal,
                                   )),
@@ -1390,6 +1470,26 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.end,
                                               children: <Widget>[
+                                                Column(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .center,
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment.end,
+                                                    children: <Widget>[
+                                                      Padding(
+                                                        padding:
+                                                            const EdgeInsets
+                                                                    .only(
+                                                                left: 4,
+                                                                bottom: 3),
+                                                        child: Icon(
+                                                          Icons.arrow_upward,
+                                                          color: Colors.green,
+                                                          size: 25,
+                                                        ),
+                                                      ),
+                                                    ]),
                                                 Column(
                                                     mainAxisAlignment:
                                                         MainAxisAlignment
