@@ -279,7 +279,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                       context,
                                                       MaterialPageRoute(
                                                           builder: (context) =>
-                                                              Tematik()));
+                                                              tematik()));
                                                 },
                                                 child: Container(
                                                   height: 40,
@@ -296,16 +296,105 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                           32, 174, 227, .6),
                                                     ]),
                                                   ),
-                                                  child: Center(
-                                                    child: Text(
-                                                      'Infografis',
-                                                      style: TextStyle(
-                                                          fontSize: 18,
-                                                          color: Colors.white,
-                                                          fontWeight:
-                                                              FontWeight.bold),
-                                                    ),
-                                                  ),
+                                                  child: Row(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .center,
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .center,
+                                                      children: <Widget>[
+                                                        Column(
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .center,
+                                                            crossAxisAlignment:
+                                                                CrossAxisAlignment
+                                                                    .center,
+                                                            children: <Widget>[
+                                                              Padding(
+                                                                padding:
+                                                                    const EdgeInsets
+                                                                            .only(
+                                                                        left: 1,
+                                                                        bottom:
+                                                                            3),
+                                                                child: Icon(
+                                                                  Icons.map,
+                                                                  color: Colors
+                                                                      .white,
+                                                                  size: 25,
+                                                                ),
+                                                              ),
+                                                            ]),
+                                                        Column(
+                                                            mainAxisAlignment:
+                                                                MainAxisAlignment
+                                                                    .center,
+                                                            crossAxisAlignment:
+                                                                CrossAxisAlignment
+                                                                    .center,
+                                                            children: <Widget>[
+                                                              Row(
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .center,
+                                                                crossAxisAlignment:
+                                                                    CrossAxisAlignment
+                                                                        .center,
+                                                                children: <
+                                                                    Widget>[
+                                                                  Padding(
+                                                                    padding: const EdgeInsets
+                                                                            .only(
+                                                                        left: 4,
+                                                                        bottom:
+                                                                            3),
+                                                                    child: Text(
+                                                                        'Peta',
+                                                                        textAlign:
+                                                                            TextAlign
+                                                                                .center,
+                                                                        style: TextStyle(
+                                                                            fontSize:
+                                                                                12,
+                                                                            color:
+                                                                                Colors.white,
+                                                                            fontWeight: FontWeight.bold)),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                              Row(
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .center,
+                                                                crossAxisAlignment:
+                                                                    CrossAxisAlignment
+                                                                        .center,
+                                                                children: <
+                                                                    Widget>[
+                                                                  Padding(
+                                                                    padding: const EdgeInsets
+                                                                            .only(
+                                                                        left: 4,
+                                                                        bottom:
+                                                                            3),
+                                                                    child: Text(
+                                                                        'Tematik',
+                                                                        textAlign:
+                                                                            TextAlign
+                                                                                .center,
+                                                                        style: TextStyle(
+                                                                            fontSize:
+                                                                                12,
+                                                                            color:
+                                                                                Colors.white,
+                                                                            fontWeight: FontWeight.bold)),
+                                                                  ),
+                                                                ],
+                                                              ),
+                                                            ]),
+                                                      ]),
                                                 ),
                                               ),
                                             ],

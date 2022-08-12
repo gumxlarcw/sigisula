@@ -8,8 +8,9 @@ class KepsulPenduduk extends StatelessWidget {
     return Scaffold(
         body: Container(
             child: Container(
+                height: 500,
                 margin: EdgeInsets.only(
-                  top: 2,
+                  top: 20,
                   right: 2,
                   left: 2,
                 ),
@@ -19,7 +20,7 @@ class KepsulPenduduk extends StatelessWidget {
                       activationMode: ActivationMode.singleTap,
                     ),
                     title: ChartTitle(
-                        text: 'Penduduk Kabupaten Kepulauan Sula Tahun 2021',
+                        text: 'Penduduk Kepulauan Sula, 2021',
                         borderWidth: 10,
                         // Aligns the chart title to left
                         alignment: ChartAlignment.center,
@@ -28,12 +29,12 @@ class KepsulPenduduk extends StatelessWidget {
                           fontFamily: 'Roboto',
                           fontStyle: FontStyle.normal,
                           fontWeight: FontWeight.w500,
-                          fontSize: 15,
+                          fontSize: 18,
                         )),
                     legend: Legend(
                         isVisible: true,
                         alignment: ChartAlignment.center,
-                        overflowMode: LegendItemOverflowMode.wrap,
+                        overflowMode: LegendItemOverflowMode.scroll,
                         position: LegendPosition.bottom,
                         title: LegendTitle(
                             text: 'Kecamatan',

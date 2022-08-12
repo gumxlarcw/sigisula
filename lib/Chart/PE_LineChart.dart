@@ -9,7 +9,7 @@ class PESulaScreen extends StatelessWidget {
         body: SafeArea(
             child: Center(
                 child: Container(
-                    margin: EdgeInsets.only(top: 2, right: 2, left: 2),
+                    margin: EdgeInsets.only(top: 10, right: 2, left: 2),
                     child: SfCartesianChart(
                         zoomPanBehavior: ZoomPanBehavior(
                           enablePanning: true,
@@ -39,7 +39,7 @@ class PESulaScreen extends StatelessWidget {
                               fontFamily: 'Roboto',
                               fontStyle: FontStyle.normal,
                               fontWeight: FontWeight.w500,
-                              fontSize: 15,
+                              fontSize: 18,
                             )),
                         primaryXAxis: CategoryAxis(
                             labelIntersectAction:
