@@ -15,8 +15,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
   int _selectedIndex = 0;
   List<Widget> _widgetOptions = <Widget>[
     KepulauanSula(),
-    MalukuUtara(),
-    Indonesia(),
+    //MalukuUtara(),
+    //Indonesia(),
     AboutScreen(),
   ];
 
@@ -42,16 +42,16 @@ class _BottomNavBarState extends State<BottomNavBar> {
             label: 'Kepulauan Sula',
             backgroundColor: Colors.white,
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.account_balance_outlined),
-            label: 'Maluku Utara',
-            backgroundColor: Colors.white,
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.account_balance_rounded),
-            label: 'Indonesia',
-            backgroundColor: Colors.white,
-          ),
+//          BottomNavigationBarItem(
+//            icon: Icon(Icons.account_balance_outlined),
+//            label: 'Maluku Utara',
+//            backgroundColor: Colors.white,
+//          ),
+//          BottomNavigationBarItem(
+//            icon: Icon(Icons.account_balance_rounded),
+//            label: 'Indonesia',
+//            backgroundColor: Colors.white,
+//          ),
           BottomNavigationBarItem(
             icon: Icon(Icons.info),
             label: 'Tentang',

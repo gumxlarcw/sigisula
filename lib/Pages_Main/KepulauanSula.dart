@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sipadu8203/Chart/Datagrid_Penduduk%20copy.dart';
 import 'package:sipadu8203/Chart/PE_LineChart.dart';
 import 'package:sipadu8203/constant/style_constant.dart';
 import 'package:sipadu8203/main.dart';
 import 'package:sipadu8203/Chart/Penduduk_PieChart.dart';
 import 'package:sipadu8203/constant/ScrollingText.dart';
 import 'package:sipadu8203/Chart/Tematik.dart';
-import 'package:syncfusion_flutter_maps/maps.dart';
 
 class KepulauanSula extends StatefulWidget {
   @override
@@ -226,7 +226,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                       context,
                                                       MaterialPageRoute(
                                                           builder: (context) =>
-                                                              KepsulPenduduk()));
+                                                              MyHomePage()));
                                                 },
                                                 child: Container(
                                                   height: 40,
@@ -279,7 +279,9 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                       context,
                                                       MaterialPageRoute(
                                                           builder: (context) =>
-                                                              tematik()));
+                                                              Tematik(
+                                                                title: '',
+                                                              )));
                                                 },
                                                 child: Container(
                                                   height: 40,

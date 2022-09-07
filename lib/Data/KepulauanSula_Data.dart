@@ -1,5 +1,5 @@
 class DataPendudukSula {
-  DataPendudukSula({this.x, this.y});
+  DataPendudukSula({required this.x, required this.y});
   final String x;
   final num y;
 }

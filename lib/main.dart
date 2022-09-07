@@ -1,7 +1,8 @@
+// @dart=2.9
+
 import 'package:flutter/material.dart';
 import 'login_page.dart';
 import 'dart:async';
-
 import 'package:sipadu8203/login_page.dart';
 
 void main() {
@@ -48,7 +49,4 @@ class _MyAppState extends State<MyApp> {
       body: Center(child: Image.asset('assets/images/logo.png')),
     );
   }
-}//
-
-
- 
+} //

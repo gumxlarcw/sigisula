@@ -9,8 +9,8 @@ class ScrollingText extends StatefulWidget {
   final double ratioOfBlankToScreen;
 
   ScrollingText({
-    @required this.text,
-    this.textStyle,
+    required this.text,
+    required this.textStyle,
     this.scrollAxis: Axis.horizontal,
     this.ratioOfBlankToScreen: 0.25,
   }) : assert(
@@ -25,11 +25,11 @@ class ScrollingText extends StatefulWidget {
 
 class ScrollingTextState extends State<ScrollingText>
     with SingleTickerProviderStateMixin {
-  ScrollController scrollController;
-  double screenWidth;
-  double screenHeight;
+  late ScrollController scrollController;
+  late double screenWidth;
+  late double screenHeight;
   double position = 0.0;
-  Timer timer;
+  late Timer timer;
   final double _moveDistance = 3.0;
   final int _timerRest = 100;
   GlobalKey _key = GlobalKey();
@@ -45,10 +45,10 @@ class ScrollingTextState extends State<ScrollingText>
 
   void startTimer() {
     if (_key.currentContext != null) {
-      double widgetWidth =
-          _key.currentContext.findRenderObject().paintBounds.size.width;
+      double? widgetWidth =
+          _key.currentContext?.findRenderObject()!.paintBounds.size.width;
       double widgetHeight =
-          _key.currentContext.findRenderObject().paintBounds.size.height;
+          _key.currentContext!.findRenderObject()!.paintBounds.size.height;
 
       timer = Timer.periodic(Duration(milliseconds: _timerRest), (timer) {
         double maxScrollExtent = scrollController.position.maxScrollExtent;
@@ -57,7 +57,7 @@ class ScrollingTextState extends State<ScrollingText>
           if (widget.scrollAxis == Axis.horizontal) {
             position = (maxScrollExtent -
                         screenWidth * widget.ratioOfBlankToScreen +
-                        widgetWidth) /
+                        widgetWidth!) /
                     2 -
                 widgetWidth +
                 pixels -

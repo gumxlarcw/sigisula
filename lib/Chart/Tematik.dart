@@ -1,21 +1,20 @@
-import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:syncfusion_flutter_maps/maps.dart';
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
 
-class tematik extends StatefulWidget {
-  const tematik({Key key, this.title}) : super(key: key);
+class Tematik extends StatefulWidget {
+  const Tematik({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
   @override
-  State<tematik> createState() => _tematik();
+  State<Tematik> createState() => _tematik();
 }
 
-class _tematik extends State<tematik> {
-  MapShapeSource _shapeSource;
-  List<MapModel> _mapData;
-  MapZoomPanBehavior _zoomPanBehavior;
+class _tematik extends State<Tematik> {
+  late MapShapeSource _shapeSource;
+  late List<MapModel> _mapData;
+  late MapZoomPanBehavior _zoomPanBehavior;
   int selectedIndex = -1;
 
   @override
