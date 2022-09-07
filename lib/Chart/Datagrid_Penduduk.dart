@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
 
-class MyHomePage extends StatefulWidget {
+class Kependudukan extends StatefulWidget {
   /// Creates the home page.
-  MyHomePage({Key? key}) : super(key: key);
+  Kependudukan({Key? key}) : super(key: key);
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _Kependudukan createState() => _Kependudukan();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _Kependudukan extends State<Kependudukan> {
   List<DataPendudukSulaa> employees = <DataPendudukSulaa>[];
   late DataPendudukSulaaDataSource employeeDataSource;
 

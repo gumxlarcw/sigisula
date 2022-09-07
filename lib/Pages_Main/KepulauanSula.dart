@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sipadu8203/Chart/Datagrid_Penduduk%20copy.dart';
+import 'package:sipadu8203/Chart/Datagrid_IPM.dart';
+import 'package:sipadu8203/Chart/Datagrid_Kemiskinan.dart';
+import 'package:sipadu8203/Chart/Datagrid_PE.dart';
+import 'package:sipadu8203/Chart/Datagrid_Penduduk.dart';
+import 'package:sipadu8203/Chart/Datagrid_Pengangguran.dart';
 import 'package:sipadu8203/Chart/PE_LineChart.dart';
 import 'package:sipadu8203/constant/style_constant.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:sipadu8203/main.dart';
 import 'package:sipadu8203/Chart/Penduduk_PieChart.dart';
 import 'package:sipadu8203/constant/ScrollingText.dart';
@@ -226,7 +232,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                       context,
                                                       MaterialPageRoute(
                                                           builder: (context) =>
-                                                              MyHomePage()));
+                                                              Kependudukan()));
                                                 },
                                                 child: Container(
                                                   height: 40,
@@ -665,7 +671,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                       context,
                                                       MaterialPageRoute(
                                                           builder: (context) =>
-                                                              KepsulPenduduk()));
+                                                              PertumbuhanEkonomi()));
                                                 },
                                                 child: Container(
                                                   height: 40,
@@ -1013,7 +1019,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                       context,
                                                       MaterialPageRoute(
                                                           builder: (context) =>
-                                                              KepsulPenduduk()));
+                                                              Pengangguran()));
                                                 },
                                                 child: Container(
                                                   height: 40,
@@ -1361,7 +1367,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                       context,
                                                       MaterialPageRoute(
                                                           builder: (context) =>
-                                                              KepsulPenduduk()));
+                                                              Kemiskinan()));
                                                 },
                                                 child: Container(
                                                   height: 40,
@@ -1709,7 +1715,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                       context,
                                                       MaterialPageRoute(
                                                           builder: (context) =>
-                                                              KepsulPenduduk()));
+                                                              IndeksPembangunanManusia()));
                                                 },
                                                 child: Container(
                                                   height: 40,
@@ -1762,7 +1768,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                       context,
                                                       MaterialPageRoute(
                                                           builder: (context) =>
-                                                              KepsulPenduduk()));
+                                                              IndeksPembangunanManusia()));
                                                 },
                                                 child: Container(
                                                   height: 40,
