@@ -24,7 +24,7 @@ class LoginPage extends StatelessWidget {
                 height: 35,
                 child: DefaultTextStyle(
                   style: TextStyle(
-                      color: Colors.lightBlueAccent,
+                      color: Colors.deepOrangeAccent,
                       fontSize: 30,
                       fontWeight: FontWeight.w900),
                   child: AnimatedTextKit(
@@ -61,8 +61,8 @@ class LoginPage extends StatelessWidget {
                         style: TextStyle(
                             letterSpacing: 7,
                             fontSize: 47,
-                            fontWeight: FontWeight.normal,
-                            color: Colors.black87),
+                            fontWeight: FontWeight.w800,
+                            color: Colors.deepOrangeAccent),
                       ),
                     ),
                     SizedBox(width: 10.0, height: 100.0),
@@ -127,8 +127,8 @@ class LoginPage extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     gradient: LinearGradient(colors: [
-                      Color.fromRGBO(32, 174, 227, 1),
-                      Color.fromRGBO(32, 174, 227, .6),
+                      Colors.deepOrangeAccent,
+                      Colors.orangeAccent,
                     ]),
                   ),
                   child: Center(

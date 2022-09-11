@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
 
-class Kemiskinan extends StatefulWidget {
+class DataGrid_Kemiskinan extends StatefulWidget {
   /// Creates the home page.
-  Kemiskinan({Key? key}) : super(key: key);
+  DataGrid_Kemiskinan({Key? key}) : super(key: key);
 
   @override
-  _Kemiskinan createState() => _Kemiskinan();
+  _DataGrid_Kemiskinan createState() => _DataGrid_Kemiskinan();
 }
 
-class _Kemiskinan extends State<Kemiskinan> {
+class _DataGrid_Kemiskinan extends State<DataGrid_Kemiskinan> {
   List<DataKemiskinanSulaa> employees = <DataKemiskinanSulaa>[];
   late DataKemiskinanSulaaDataSource employeeDataSource;
 
@@ -26,7 +26,7 @@ class _Kemiskinan extends State<Kemiskinan> {
     return Scaffold(
         appBar: AppBar(
           title: Text(
-            'Kemiskinan',
+            'Kemiskinan (persen)',
             textAlign: TextAlign.left,
           ),
         ),
@@ -34,34 +34,45 @@ class _Kemiskinan extends State<Kemiskinan> {
           data: SfDataGridThemeData(sortIconColor: Colors.redAccent),
           child: SfDataGrid(
             source: employeeDataSource,
-            tableSummaryRows: [
-              GridTableSummaryRow(
-                  color: Colors.indigo,
-                  showSummaryInRow: true,
-                  title: 'Total Kemiskinan : {Kemiskinan} jiwa',
-                  columns: [
-                    GridSummaryColumn(
-                        name: 'Kemiskinan',
-                        columnName: 'jmlh_pddk',
-                        summaryType: GridSummaryType.sum)
-                  ],
-                  position: GridTableSummaryRowPosition.bottom)
-            ],
-            allowSorting: true,
+            allowSorting: false,
             columnWidthMode: ColumnWidthMode.fill,
             columns: <GridColumn>[
               GridColumn(
-                  columnName: 'kec',
+                  columnName: 'tahun',
                   label: Container(
                       padding: EdgeInsets.all(8.0),
                       alignment: Alignment.center,
-                      child: Text('Kecamatan'))),
+                      child: Text(
+                        'Tahun',
+                        textAlign: TextAlign.center,
+                      ))),
               GridColumn(
-                  columnName: 'jmlh_pddk',
+                  columnName: 'pekepsul',
                   label: Container(
                       padding: EdgeInsets.all(8.0),
                       alignment: Alignment.center,
-                      child: Text('Jumlah Kemiskinan (jiwa)'))),
+                      child: Text(
+                        'Kepulauan Sula',
+                        textAlign: TextAlign.center,
+                      ))),
+              GridColumn(
+                  columnName: 'pemalut',
+                  label: Container(
+                      padding: EdgeInsets.all(8.0),
+                      alignment: Alignment.center,
+                      child: Text(
+                        'Maluku Utara',
+                        textAlign: TextAlign.center,
+                      ))),
+              GridColumn(
+                  columnName: 'peindo',
+                  label: Container(
+                      padding: EdgeInsets.all(8.0),
+                      alignment: Alignment.center,
+                      child: Text(
+                        'Indonesia',
+                        textAlign: TextAlign.center,
+                      ))),
             ],
             selectionMode: SelectionMode.multiple,
           ),
@@ -70,18 +81,11 @@ class _Kemiskinan extends State<Kemiskinan> {
 
   List<DataKemiskinanSulaa> getDataKemiskinanSulaa() {
     return [
-      DataKemiskinanSulaa('Sanana', 34642),
-      DataKemiskinanSulaa('Mangoli Utara', 9372),
-      DataKemiskinanSulaa('Sanana Utara', 7764),
-      DataKemiskinanSulaa('Mangoli Tengah', 7700),
-      DataKemiskinanSulaa('Sulabesi Tengah', 7318),
-      DataKemiskinanSulaa('Mangoli Barat', 7136),
-      DataKemiskinanSulaa('Mangoli Timur', 5701),
-      DataKemiskinanSulaa('Sulabesi Selatan', 5628),
-      DataKemiskinanSulaa('Sulabesi Barat', 5621),
-      DataKemiskinanSulaa('Mangoli Selatan', 5172),
-      DataKemiskinanSulaa('Mangoli Utara Timur', 4791),
-      DataKemiskinanSulaa('Sulabesi Timur', 4450),
+      DataKemiskinanSulaa('2017', 8.59, 6.35, 10.64),
+      DataKemiskinanSulaa('2018', 8.89, 6.64, 9.82),
+      DataKemiskinanSulaa('2019', 8.98, 6.77, 9.41),
+      DataKemiskinanSulaa('2020', 8.35, 6.78, 9.78),
+      DataKemiskinanSulaa('2021', 8.23, 6.89, 10.14),
     ];
   }
 }
@@ -90,17 +94,19 @@ class _Kemiskinan extends State<Kemiskinan> {
 /// information about the employee which will be rendered in datagrid.
 class DataKemiskinanSulaa {
   /// Creates the employee class with required details.
-  DataKemiskinanSulaa(this.kec, this.jmlh_pddk);
+  DataKemiskinanSulaa(this.tahun, this.pekepsul, this.pemalut, this.peindo);
 
   /// Id of an employee.
 
   /// Name of an employee.
-  final String kec;
+  final String tahun;
 
   /// Designation of an employee.
 
   /// Salary of an employee.
-  final int jmlh_pddk;
+  final double pekepsul;
+  final double pemalut;
+  final double peindo;
 }
 
 /// An object to set the employee collection data source to the datagrid. This
@@ -111,8 +117,10 @@ class DataKemiskinanSulaaDataSource extends DataGridSource {
       {required List<DataKemiskinanSulaa> employeeData}) {
     _employeeData = employeeData
         .map<DataGridRow>((e) => DataGridRow(cells: [
-              DataGridCell<String>(columnName: 'kec', value: e.kec),
-              DataGridCell<int>(columnName: 'jmlh_pddk', value: e.jmlh_pddk),
+              DataGridCell<String>(columnName: 'tahun', value: e.tahun),
+              DataGridCell<double>(columnName: 'pekepsul', value: e.pekepsul),
+              DataGridCell<double>(columnName: 'pemalut', value: e.pemalut),
+              DataGridCell<double>(columnName: 'pemalut', value: e.peindo),
             ]))
         .toList();
   }

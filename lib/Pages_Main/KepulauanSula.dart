@@ -6,13 +6,16 @@ import 'package:sipadu8203/Chart/Datagrid_Kemiskinan.dart';
 import 'package:sipadu8203/Chart/Datagrid_PE.dart';
 import 'package:sipadu8203/Chart/Datagrid_Penduduk.dart';
 import 'package:sipadu8203/Chart/Datagrid_Pengangguran.dart';
-import 'package:sipadu8203/Chart/PE_LineChart.dart';
+import 'package:sipadu8203/Chart/LineChart_IPM.dart';
+import 'package:sipadu8203/Chart/LineChart_Kemiskinan.dart';
+import 'package:sipadu8203/Chart/LineChart_Pengangguran.dart';
+import 'package:sipadu8203/Chart/LineChart_PE.dart';
 import 'package:sipadu8203/constant/style_constant.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:sipadu8203/main.dart';
-import 'package:sipadu8203/Chart/Penduduk_PieChart.dart';
+import 'package:sipadu8203/Chart/PieChart_Penduduk.dart';
 import 'package:sipadu8203/constant/ScrollingText.dart';
-import 'package:sipadu8203/Chart/Tematik.dart';
+import 'package:sipadu8203/Chart/Tematik_Penduduk.dart';
 
 class KepulauanSula extends StatefulWidget {
   @override
@@ -24,7 +27,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
   Widget build(BuildContext context) {
     List<HexColor> parentIndex = [
       HexColor('#FFD700'),
-      HexColor('#aaa9ad'),
+      HexColor('#b87333'),
       HexColor('#b87333')
     ];
     return Scaffold(
@@ -33,7 +36,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
             style: GoogleFonts.publicSans(
                 textStyle:
                     TextStyle(fontSize: 30, fontWeight: FontWeight.bold))),
-        backgroundColor: Colors.lightBlueAccent,
+        backgroundColor: Colors.deepOrangeAccent,
         centerTitle: true,
         automaticallyImplyLeading: false,
       ),
@@ -171,20 +174,58 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                             ),
                                           ],
                                         ),
-                                        Column(
-                                          children: <Widget>[
-                                            Icon(
-                                              Icons.collections_bookmark,
-                                              color:
-                                                  Colors.grey.withOpacity(0.5),
-                                              size: 60,
-                                            ),
-                                          ],
-                                        )
+                                        Column(children: <Widget>[
+                                          Container(
+                                              width: 150,
+                                              height: 50,
+                                              decoration: BoxDecoration(
+                                                color: Colors.black,
+                                                borderRadius: BorderRadius.only(
+                                                    topLeft:
+                                                        Radius.circular(8.0),
+                                                    bottomLeft:
+                                                        Radius.circular(1.0),
+                                                    bottomRight:
+                                                        Radius.circular(1.0),
+                                                    topRight:
+                                                        Radius.circular(68.0)),
+                                                boxShadow: <BoxShadow>[
+                                                  BoxShadow(
+                                                      color: Colors
+                                                          .deepOrangeAccent,
+                                                      offset: Offset(1.1, 1.1),
+                                                      blurRadius: 7.0),
+                                                ],
+                                              ),
+                                              child: ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadius.only(
+                                                          topLeft: Radius
+                                                              .circular(8.0),
+                                                          bottomLeft:
+                                                              Radius.circular(
+                                                                  1.0),
+                                                          bottomRight:
+                                                              Radius.circular(
+                                                                  1.0),
+                                                          topRight:
+                                                              Radius.circular(
+                                                                  68.0)),
+                                                  child: Image(
+                                                    image: AssetImage(
+                                                        'assets/images/penduduk.jpg'),
+                                                    fit: BoxFit.cover,
+                                                  )))
+                                        ])
                                       ],
                                     )
                                   ],
                                 ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 24, right: 24, top: 1, bottom: 1),
+                                child: Container(height: 10),
                               ),
                               Container(
                                   margin: EdgeInsets.all(1.0),
@@ -202,7 +243,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                 child: Container(
                                   height: 2,
                                   decoration: BoxDecoration(
-                                    color: Colors.black12,
+                                    color: Colors.deepOrange.withOpacity(0.5),
                                     borderRadius:
                                         BorderRadius.all(Radius.circular(4.0)),
                                   ),
@@ -232,7 +273,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                       context,
                                                       MaterialPageRoute(
                                                           builder: (context) =>
-                                                              Kependudukan()));
+                                                              DataGrid_Kependudukan()));
                                                 },
                                                 child: Container(
                                                   height: 40,
@@ -243,10 +284,8 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                             5),
                                                     gradient:
                                                         LinearGradient(colors: [
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, 1),
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, .6),
+                                                      Colors.deepOrange,
+                                                      Colors.orangeAccent,
                                                     ]),
                                                   ),
                                                   child: Center(
@@ -298,10 +337,8 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                             5),
                                                     gradient:
                                                         LinearGradient(colors: [
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, 1),
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, .6),
+                                                      Colors.deepOrange,
+                                                      Colors.orangeAccent,
                                                     ]),
                                                   ),
                                                   child: Row(
@@ -440,10 +477,8 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                             5),
                                                     gradient:
                                                         LinearGradient(colors: [
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, 1),
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, .6),
+                                                      Colors.deepOrangeAccent,
+                                                      Colors.orangeAccent,
                                                     ]),
                                                   ),
                                                   child: Center(
@@ -606,24 +641,58 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                             ),
                                           ],
                                         ),
-                                        Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.end,
-                                          children: <Widget>[
-                                            Icon(
-                                              Icons.collections_bookmark,
-                                              color:
-                                                  Colors.grey.withOpacity(0.5),
-                                              size: 60,
-                                            ),
-                                          ],
-                                        )
+                                        Column(children: <Widget>[
+                                          Container(
+                                              width: 150,
+                                              height: 50,
+                                              decoration: BoxDecoration(
+                                                color: Colors.black,
+                                                borderRadius: BorderRadius.only(
+                                                    topLeft:
+                                                        Radius.circular(8.0),
+                                                    bottomLeft:
+                                                        Radius.circular(1.0),
+                                                    bottomRight:
+                                                        Radius.circular(1.0),
+                                                    topRight:
+                                                        Radius.circular(68.0)),
+                                                boxShadow: <BoxShadow>[
+                                                  BoxShadow(
+                                                      color: Colors
+                                                          .deepOrangeAccent,
+                                                      offset: Offset(1.1, 1.1),
+                                                      blurRadius: 7.0),
+                                                ],
+                                              ),
+                                              child: ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadius.only(
+                                                          topLeft: Radius
+                                                              .circular(8.0),
+                                                          bottomLeft:
+                                                              Radius.circular(
+                                                                  1.0),
+                                                          bottomRight:
+                                                              Radius.circular(
+                                                                  1.0),
+                                                          topRight:
+                                                              Radius.circular(
+                                                                  68.0)),
+                                                  child: Image(
+                                                    image: AssetImage(
+                                                        'assets/images/ekonomi.jpg'),
+                                                    fit: BoxFit.cover,
+                                                  )))
+                                        ])
                                       ],
                                     )
                                   ],
                                 ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 24, right: 24, top: 1, bottom: 1),
+                                child: Container(height: 10),
                               ),
                               Container(
                                   margin: EdgeInsets.all(1.0),
@@ -641,7 +710,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                 child: Container(
                                   height: 2,
                                   decoration: BoxDecoration(
-                                    color: Colors.black12,
+                                    color: Colors.deepOrange.withOpacity(0.5),
                                     borderRadius:
                                         BorderRadius.all(Radius.circular(4.0)),
                                   ),
@@ -671,7 +740,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                       context,
                                                       MaterialPageRoute(
                                                           builder: (context) =>
-                                                              PertumbuhanEkonomi()));
+                                                              DataGrid_PertumbuhanEkonomi()));
                                                 },
                                                 child: Container(
                                                   height: 40,
@@ -682,10 +751,8 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                             5),
                                                     gradient:
                                                         LinearGradient(colors: [
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, 1),
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, .6),
+                                                      Colors.deepOrange,
+                                                      Colors.orangeAccent,
                                                     ]),
                                                   ),
                                                   child: Center(
@@ -735,10 +802,8 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                             5),
                                                     gradient:
                                                         LinearGradient(colors: [
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, 1),
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, .6),
+                                                      Colors.deepOrange,
+                                                      Colors.orangeAccent,
                                                     ]),
                                                   ),
                                                   child: Center(
@@ -777,7 +842,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                       context,
                                                       MaterialPageRoute(
                                                           builder: (context) =>
-                                                              PESulaScreen()));
+                                                              LineChart_PertumbuhanEkonomi()));
                                                 },
                                                 child: Container(
                                                   height: 40,
@@ -788,10 +853,8 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                             5),
                                                     gradient:
                                                         LinearGradient(colors: [
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, 1),
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, .6),
+                                                      Colors.deepOrange,
+                                                      Colors.orangeAccent,
                                                     ]),
                                                   ),
                                                   child: Center(
@@ -954,24 +1017,58 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                             ),
                                           ],
                                         ),
-                                        Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.end,
-                                          children: <Widget>[
-                                            Icon(
-                                              Icons.collections_bookmark,
-                                              color:
-                                                  Colors.grey.withOpacity(0.5),
-                                              size: 60,
-                                            ),
-                                          ],
-                                        )
+                                        Column(children: <Widget>[
+                                          Container(
+                                              width: 150,
+                                              height: 50,
+                                              decoration: BoxDecoration(
+                                                color: Colors.black,
+                                                borderRadius: BorderRadius.only(
+                                                    topLeft:
+                                                        Radius.circular(8.0),
+                                                    bottomLeft:
+                                                        Radius.circular(1.0),
+                                                    bottomRight:
+                                                        Radius.circular(1.0),
+                                                    topRight:
+                                                        Radius.circular(68.0)),
+                                                boxShadow: <BoxShadow>[
+                                                  BoxShadow(
+                                                      color: Colors
+                                                          .deepOrangeAccent,
+                                                      offset: Offset(1.1, 1.1),
+                                                      blurRadius: 7.0),
+                                                ],
+                                              ),
+                                              child: ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadius.only(
+                                                          topLeft: Radius
+                                                              .circular(8.0),
+                                                          bottomLeft:
+                                                              Radius.circular(
+                                                                  1.0),
+                                                          bottomRight:
+                                                              Radius.circular(
+                                                                  1.0),
+                                                          topRight:
+                                                              Radius.circular(
+                                                                  68.0)),
+                                                  child: Image(
+                                                    image: AssetImage(
+                                                        'assets/images/pengangguran.jpg'),
+                                                    fit: BoxFit.cover,
+                                                  )))
+                                        ])
                                       ],
                                     )
                                   ],
                                 ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 24, right: 24, top: 1, bottom: 1),
+                                child: Container(height: 10),
                               ),
                               Container(
                                   margin: EdgeInsets.all(1.0),
@@ -979,7 +1076,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                   height: 15,
                                   child: ScrollingText(
                                     text:
-                                        '1,3 ribu dari 45,7 ribu penduduk yang merupakan Angkatan Kerja di Kabupaten Kepulauan Sula pada Tahun 2021 merupakan Pengangguran Terbuka.',
+                                        'Tingkat Pengangguran Terbuka di Kabupaten Kepulauan Sula pada Tahun 2021 sebesar 2,78 Persen, turun 2.12 persen dari tahun 2020',
                                     textStyle: TextStyle(fontSize: 12),
                                     scrollAxis: Axis.horizontal,
                                   )),
@@ -989,7 +1086,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                 child: Container(
                                   height: 2,
                                   decoration: BoxDecoration(
-                                    color: Colors.black12,
+                                    color: Colors.deepOrange.withOpacity(0.5),
                                     borderRadius:
                                         BorderRadius.all(Radius.circular(4.0)),
                                   ),
@@ -1019,7 +1116,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                       context,
                                                       MaterialPageRoute(
                                                           builder: (context) =>
-                                                              Pengangguran()));
+                                                              DataGrid_Pengangguran()));
                                                 },
                                                 child: Container(
                                                   height: 40,
@@ -1030,10 +1127,8 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                             5),
                                                     gradient:
                                                         LinearGradient(colors: [
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, 1),
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, .6),
+                                                      Colors.deepOrange,
+                                                      Colors.orangeAccent,
                                                     ]),
                                                   ),
                                                   child: Center(
@@ -1083,10 +1178,8 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                             5),
                                                     gradient:
                                                         LinearGradient(colors: [
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, 1),
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, .6),
+                                                      Colors.deepOrange,
+                                                      Colors.orangeAccent,
                                                     ]),
                                                   ),
                                                   child: Center(
@@ -1125,7 +1218,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                       context,
                                                       MaterialPageRoute(
                                                           builder: (context) =>
-                                                              KepsulPenduduk()));
+                                                              LineChart_Pengangguran()));
                                                 },
                                                 child: Container(
                                                   height: 40,
@@ -1136,10 +1229,8 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                             5),
                                                     gradient:
                                                         LinearGradient(colors: [
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, 1),
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, .6),
+                                                      Colors.deepOrange,
+                                                      Colors.orangeAccent,
                                                     ]),
                                                   ),
                                                   child: Center(
@@ -1302,24 +1393,58 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                             ),
                                           ],
                                         ),
-                                        Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.end,
-                                          children: <Widget>[
-                                            Icon(
-                                              Icons.collections_bookmark,
-                                              color:
-                                                  Colors.grey.withOpacity(0.5),
-                                              size: 60,
-                                            ),
-                                          ],
-                                        )
+                                        Column(children: <Widget>[
+                                          Container(
+                                              width: 150,
+                                              height: 50,
+                                              decoration: BoxDecoration(
+                                                color: Colors.black,
+                                                borderRadius: BorderRadius.only(
+                                                    topLeft:
+                                                        Radius.circular(8.0),
+                                                    bottomLeft:
+                                                        Radius.circular(1.0),
+                                                    bottomRight:
+                                                        Radius.circular(1.0),
+                                                    topRight:
+                                                        Radius.circular(68.0)),
+                                                boxShadow: <BoxShadow>[
+                                                  BoxShadow(
+                                                      color: Colors
+                                                          .deepOrangeAccent,
+                                                      offset: Offset(1.1, 1.1),
+                                                      blurRadius: 7.0),
+                                                ],
+                                              ),
+                                              child: ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadius.only(
+                                                          topLeft: Radius
+                                                              .circular(8.0),
+                                                          bottomLeft:
+                                                              Radius.circular(
+                                                                  1.0),
+                                                          bottomRight:
+                                                              Radius.circular(
+                                                                  1.0),
+                                                          topRight:
+                                                              Radius.circular(
+                                                                  68.0)),
+                                                  child: Image(
+                                                    image: AssetImage(
+                                                        'assets/images/kemiskinan.jpg'),
+                                                    fit: BoxFit.cover,
+                                                  )))
+                                        ])
                                       ],
                                     )
                                   ],
                                 ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 24, right: 24, top: 1, bottom: 1),
+                                child: Container(height: 10),
                               ),
                               Container(
                                   margin: EdgeInsets.all(1.0),
@@ -1337,7 +1462,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                 child: Container(
                                   height: 2,
                                   decoration: BoxDecoration(
-                                    color: Colors.black12,
+                                    color: Colors.deepOrange.withOpacity(0.5),
                                     borderRadius:
                                         BorderRadius.all(Radius.circular(4.0)),
                                   ),
@@ -1367,7 +1492,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                       context,
                                                       MaterialPageRoute(
                                                           builder: (context) =>
-                                                              Kemiskinan()));
+                                                              DataGrid_Kemiskinan()));
                                                 },
                                                 child: Container(
                                                   height: 40,
@@ -1378,10 +1503,8 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                             5),
                                                     gradient:
                                                         LinearGradient(colors: [
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, 1),
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, .6),
+                                                      Colors.deepOrange,
+                                                      Colors.orangeAccent,
                                                     ]),
                                                   ),
                                                   child: Center(
@@ -1431,10 +1554,8 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                             5),
                                                     gradient:
                                                         LinearGradient(colors: [
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, 1),
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, .6),
+                                                      Colors.deepOrange,
+                                                      Colors.orangeAccent,
                                                     ]),
                                                   ),
                                                   child: Center(
@@ -1473,7 +1594,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                       context,
                                                       MaterialPageRoute(
                                                           builder: (context) =>
-                                                              KepsulPenduduk()));
+                                                              LineChart_Kemiskinan()));
                                                 },
                                                 child: Container(
                                                   height: 40,
@@ -1484,10 +1605,8 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                             5),
                                                     gradient:
                                                         LinearGradient(colors: [
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, 1),
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, .6),
+                                                      Colors.deepOrange,
+                                                      Colors.orangeAccent,
                                                     ]),
                                                   ),
                                                   child: Center(
@@ -1650,24 +1769,58 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                             ),
                                           ],
                                         ),
-                                        Column(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.end,
-                                          children: <Widget>[
-                                            Icon(
-                                              Icons.collections_bookmark,
-                                              color:
-                                                  Colors.grey.withOpacity(0.5),
-                                              size: 60,
-                                            ),
-                                          ],
-                                        )
+                                        Column(children: <Widget>[
+                                          Container(
+                                              width: 150,
+                                              height: 50,
+                                              decoration: BoxDecoration(
+                                                color: Colors.black,
+                                                borderRadius: BorderRadius.only(
+                                                    topLeft:
+                                                        Radius.circular(8.0),
+                                                    bottomLeft:
+                                                        Radius.circular(1.0),
+                                                    bottomRight:
+                                                        Radius.circular(1.0),
+                                                    topRight:
+                                                        Radius.circular(68.0)),
+                                                boxShadow: <BoxShadow>[
+                                                  BoxShadow(
+                                                      color: Colors
+                                                          .deepOrangeAccent,
+                                                      offset: Offset(1.1, 1.1),
+                                                      blurRadius: 7.0),
+                                                ],
+                                              ),
+                                              child: ClipRRect(
+                                                  borderRadius:
+                                                      BorderRadius.only(
+                                                          topLeft: Radius
+                                                              .circular(8.0),
+                                                          bottomLeft:
+                                                              Radius.circular(
+                                                                  1.0),
+                                                          bottomRight:
+                                                              Radius.circular(
+                                                                  1.0),
+                                                          topRight:
+                                                              Radius.circular(
+                                                                  68.0)),
+                                                  child: Image(
+                                                    image: AssetImage(
+                                                        'assets/images/penduduk.jpg'),
+                                                    fit: BoxFit.cover,
+                                                  )))
+                                        ])
                                       ],
                                     )
                                   ],
                                 ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 24, right: 24, top: 1, bottom: 1),
+                                child: Container(height: 10),
                               ),
                               Container(
                                   margin: EdgeInsets.all(1.0),
@@ -1685,7 +1838,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                 child: Container(
                                   height: 2,
                                   decoration: BoxDecoration(
-                                    color: Colors.black12,
+                                    color: Colors.deepOrange.withOpacity(0.5),
                                     borderRadius:
                                         BorderRadius.all(Radius.circular(4.0)),
                                   ),
@@ -1715,7 +1868,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                       context,
                                                       MaterialPageRoute(
                                                           builder: (context) =>
-                                                              IndeksPembangunanManusia()));
+                                                              DataGrid_IndeksPembangunanManusia()));
                                                 },
                                                 child: Container(
                                                   height: 40,
@@ -1726,10 +1879,8 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                             5),
                                                     gradient:
                                                         LinearGradient(colors: [
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, 1),
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, .6),
+                                                      Colors.deepOrange,
+                                                      Colors.orangeAccent,
                                                     ]),
                                                   ),
                                                   child: Center(
@@ -1768,7 +1919,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                       context,
                                                       MaterialPageRoute(
                                                           builder: (context) =>
-                                                              IndeksPembangunanManusia()));
+                                                              DataGrid_IndeksPembangunanManusia()));
                                                 },
                                                 child: Container(
                                                   height: 40,
@@ -1779,10 +1930,8 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                             5),
                                                     gradient:
                                                         LinearGradient(colors: [
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, 1),
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, .6),
+                                                      Colors.deepOrange,
+                                                      Colors.orangeAccent,
                                                     ]),
                                                   ),
                                                   child: Center(
@@ -1821,7 +1970,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                       context,
                                                       MaterialPageRoute(
                                                           builder: (context) =>
-                                                              KepsulPenduduk()));
+                                                              LineChart_IPM()));
                                                 },
                                                 child: Container(
                                                   height: 40,
@@ -1832,10 +1981,8 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                             5),
                                                     gradient:
                                                         LinearGradient(colors: [
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, 1),
-                                                      Color.fromRGBO(
-                                                          32, 174, 227, .6),
+                                                      Colors.deepOrange,
+                                                      Colors.orangeAccent,
                                                     ]),
                                                   ),
                                                   child: Center(

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sipadu8203/Data/KepulauanSula_Data.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
-class PESulaScreen extends StatelessWidget {
+class LineChart_Kemiskinan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +31,7 @@ class PESulaScreen extends StatelessWidget {
                             isResponsive: true,
                             position: LegendPosition.top),
                         title: ChartTitle(
-                            text: 'Pertumbuhan Ekonomi',
+                            text: 'Kemiskinan (persen)',
                             borderWidth: 10,
                             alignment: ChartAlignment.center,
                             textStyle: TextStyle(
@@ -60,8 +60,8 @@ class PESulaScreen extends StatelessWidget {
                                     fontStyle: FontStyle.italic,
                                     fontWeight: FontWeight.w500))),
                         primaryYAxis: NumericAxis(
-                          minimum: -3,
-                          maximum: 17,
+                          minimum: 0,
+                          maximum: 11,
                           interval: 1,
                           labelStyle: TextStyle(
                               color: Colors.black,
@@ -85,30 +85,36 @@ class PESulaScreen extends StatelessWidget {
                         ),
                         series: <ChartSeries>[
                           // Renders line chart
-                          LineSeries<DataPE, String>(
+                          LineSeries<DataKemiskinan, String>(
                               color: Colors.blueAccent,
                               name: 'Kepulauan Sula',
-                              dataSource: pe,
-                              xValueMapper: (DataPE data, _) => data.tahun,
-                              yValueMapper: (DataPE data, _) => data.sula,
+                              dataSource: kemiskinan,
+                              xValueMapper: (DataKemiskinan data, _) =>
+                                  data.tahun,
+                              yValueMapper: (DataKemiskinan data, _) =>
+                                  data.sula,
                               markerSettings: MarkerSettings(
                                 isVisible: true,
                               )),
-                          LineSeries<DataPE, String>(
+                          LineSeries<DataKemiskinan, String>(
                               color: Colors.green,
                               name: 'Maluku Utara',
-                              dataSource: pe,
-                              xValueMapper: (DataPE data, _) => data.tahun,
-                              yValueMapper: (DataPE data, _) => data.malut,
+                              dataSource: kemiskinan,
+                              xValueMapper: (DataKemiskinan data, _) =>
+                                  data.tahun,
+                              yValueMapper: (DataKemiskinan data, _) =>
+                                  data.malut,
                               markerSettings: MarkerSettings(
                                 isVisible: true,
                               )),
-                          LineSeries<DataPE, String>(
+                          LineSeries<DataKemiskinan, String>(
                               color: Colors.red,
                               name: 'Indonesia',
-                              dataSource: pe,
-                              xValueMapper: (DataPE data, _) => data.tahun,
-                              yValueMapper: (DataPE data, _) => data.indo,
+                              dataSource: kemiskinan,
+                              xValueMapper: (DataKemiskinan data, _) =>
+                                  data.tahun,
+                              yValueMapper: (DataKemiskinan data, _) =>
+                                  data.indo,
                               markerSettings: MarkerSettings(
                                 isVisible: true,
                               ))

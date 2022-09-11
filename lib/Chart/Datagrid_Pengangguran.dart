@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:sipadu8203/Pages_Main/Indonesia.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
 
-class Pengangguran extends StatefulWidget {
+class DataGrid_Pengangguran extends StatefulWidget {
   /// Creates the home page.
-  Pengangguran({Key? key}) : super(key: key);
+  DataGrid_Pengangguran({Key? key}) : super(key: key);
 
   @override
-  _Pengangguran createState() => _Pengangguran();
+  _DataGrid_Pengangguran createState() => _DataGrid_Pengangguran();
 }
 
-class _Pengangguran extends State<Pengangguran> {
+class _DataGrid_Pengangguran extends State<DataGrid_Pengangguran> {
   List<DataPengangguranSulaa> employees = <DataPengangguranSulaa>[];
   late DataPengangguranSulaaDataSource employeeDataSource;
 
@@ -27,7 +28,8 @@ class _Pengangguran extends State<Pengangguran> {
     return Scaffold(
         appBar: AppBar(
           title: Text(
-            'Pengangguran',
+            'Tingkat Pengangguran Terbuka (persen)',
+            style: TextStyle(fontSize: 16),
             textAlign: TextAlign.left,
           ),
         ),
@@ -35,34 +37,45 @@ class _Pengangguran extends State<Pengangguran> {
           data: SfDataGridThemeData(sortIconColor: Colors.redAccent),
           child: SfDataGrid(
             source: employeeDataSource,
-            tableSummaryRows: [
-              GridTableSummaryRow(
-                  color: Colors.indigo,
-                  showSummaryInRow: true,
-                  title: 'Total Pengangguran : {Pengangguran} jiwa',
-                  columns: [
-                    GridSummaryColumn(
-                        name: 'Pengangguran',
-                        columnName: 'jmlh_pddk',
-                        summaryType: GridSummaryType.sum)
-                  ],
-                  position: GridTableSummaryRowPosition.bottom)
-            ],
-            allowSorting: true,
+            allowSorting: false,
             columnWidthMode: ColumnWidthMode.fill,
             columns: <GridColumn>[
               GridColumn(
-                  columnName: 'kec',
+                  columnName: 'tahun',
                   label: Container(
                       padding: EdgeInsets.all(8.0),
                       alignment: Alignment.center,
-                      child: Text('Kecamatan'))),
+                      child: Text(
+                        'Tahun',
+                        textAlign: TextAlign.center,
+                      ))),
               GridColumn(
-                  columnName: 'jmlh_pddk',
+                  columnName: 'pekepsul',
                   label: Container(
                       padding: EdgeInsets.all(8.0),
                       alignment: Alignment.center,
-                      child: Text('Jumlah Pengangguran (jiwa)'))),
+                      child: Text(
+                        'Kepulauan Sula',
+                        textAlign: TextAlign.center,
+                      ))),
+              GridColumn(
+                  columnName: 'pemalut',
+                  label: Container(
+                      padding: EdgeInsets.all(8.0),
+                      alignment: Alignment.center,
+                      child: Text(
+                        'Maluku Utara',
+                        textAlign: TextAlign.center,
+                      ))),
+              GridColumn(
+                  columnName: 'peindo',
+                  label: Container(
+                      padding: EdgeInsets.all(8.0),
+                      alignment: Alignment.center,
+                      child: Text(
+                        'Indonesia',
+                        textAlign: TextAlign.center,
+                      ))),
             ],
             selectionMode: SelectionMode.multiple,
           ),
@@ -71,18 +84,11 @@ class _Pengangguran extends State<Pengangguran> {
 
   List<DataPengangguranSulaa> getDataPengangguranSulaa() {
     return [
-      DataPengangguranSulaa('Sanana', 34642),
-      DataPengangguranSulaa('Mangoli Utara', 9372),
-      DataPengangguranSulaa('Sanana Utara', 7764),
-      DataPengangguranSulaa('Mangoli Tengah', 7700),
-      DataPengangguranSulaa('Sulabesi Tengah', 7318),
-      DataPengangguranSulaa('Mangoli Barat', 7136),
-      DataPengangguranSulaa('Mangoli Timur', 5701),
-      DataPengangguranSulaa('Sulabesi Selatan', 5628),
-      DataPengangguranSulaa('Sulabesi Barat', 5621),
-      DataPengangguranSulaa('Mangoli Selatan', 5172),
-      DataPengangguranSulaa('Mangoli Utara Timur', 4791),
-      DataPengangguranSulaa('Sulabesi Timur', 4450),
+      DataPengangguranSulaa('2017', 5.86, 5.33, 5.50),
+      DataPengangguranSulaa('2018', 5.34, 4.77, 5.30),
+      DataPengangguranSulaa('2019', 4.93, 4.97, 5.23),
+      DataPengangguranSulaa('2020', 4.90, 5.15, 7.07),
+      DataPengangguranSulaa('2021', 2.78, 4.71, 6.49),
     ];
   }
 }
@@ -91,7 +97,7 @@ class _Pengangguran extends State<Pengangguran> {
 /// information about the employee which will be rendered in datagrid.
 class DataPengangguranSulaa {
   /// Creates the employee class with required details.
-  DataPengangguranSulaa(this.kec, this.jmlh_pddk);
+  DataPengangguranSulaa(this.kec, this.sula, this.malut, this.indo);
 
   /// Id of an employee.
 
@@ -101,7 +107,9 @@ class DataPengangguranSulaa {
   /// Designation of an employee.
 
   /// Salary of an employee.
-  final int jmlh_pddk;
+  final double sula;
+  final double malut;
+  final double indo;
 }
 
 /// An object to set the employee collection data source to the datagrid. This
@@ -113,7 +121,9 @@ class DataPengangguranSulaaDataSource extends DataGridSource {
     _employeeData = employeeData
         .map<DataGridRow>((e) => DataGridRow(cells: [
               DataGridCell<String>(columnName: 'kec', value: e.kec),
-              DataGridCell<int>(columnName: 'jmlh_pddk', value: e.jmlh_pddk),
+              DataGridCell<double>(columnName: 'sula', value: e.sula),
+              DataGridCell<double>(columnName: 'malut', value: e.malut),
+              DataGridCell<double>(columnName: 'indo', value: e.indo),
             ]))
         .toList();
   }

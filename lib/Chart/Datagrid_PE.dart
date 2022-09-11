@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 import 'package:syncfusion_flutter_core/theme.dart';
 
-class PertumbuhanEkonomi extends StatefulWidget {
+class DataGrid_PertumbuhanEkonomi extends StatefulWidget {
   /// Creates the home page.
-  PertumbuhanEkonomi({Key? key}) : super(key: key);
+  DataGrid_PertumbuhanEkonomi({Key? key}) : super(key: key);
 
   @override
-  _PertumbuhanEkonomi createState() => _PertumbuhanEkonomi();
+  _DataGrid_PertumbuhanEkonomi createState() => _DataGrid_PertumbuhanEkonomi();
 }
 
-class _PertumbuhanEkonomi extends State<PertumbuhanEkonomi> {
+class _DataGrid_PertumbuhanEkonomi extends State<DataGrid_PertumbuhanEkonomi> {
   List<DataPertumbuhanEkonomiSulaa> employees = <DataPertumbuhanEkonomiSulaa>[];
   late DataPertumbuhanEkonomiSulaaDataSource employeeDataSource;
 

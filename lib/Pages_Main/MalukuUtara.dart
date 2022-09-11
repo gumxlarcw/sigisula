@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sipadu8203/constant/style_constant.dart';
 import 'package:sipadu8203/main.dart';
-import 'package:sipadu8203/Chart/Penduduk_PieChart.dart';
+import 'package:sipadu8203/Chart/PieChart_Penduduk.dart';
 
 class MalukuUtara extends StatefulWidget {
   @override
