@@ -45,7 +45,7 @@ class _AboutScreenState extends State<AboutScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
-                                Text('SIGISULA 1.0', style: mTentangStyle),
+                                Text('IST SULA 1.0', style: mTentangStyle),
                                 SizedBox(height: 10),
                                 Container(
                                   constraints: new BoxConstraints(
@@ -53,7 +53,7 @@ class _AboutScreenState extends State<AboutScreen> {
                                           MediaQuery.of(context).size.width -
                                               95),
                                   child: Text(
-                                      'SIGISULA (Sistem Infomasi Strategis Kepulauan Sula) adalah sistem yang dirancang untuk memenuhi kebutuhan informasi mengenai Data-Data Strategis di Kabupaten Kabupaten Sula. Sistem ini akan terus disempurnakan, oleh karena itu diharapkan pengguna sistem ini dapat memberi masukan dan melaporkan bug yang ditemui.',
+                                      'IST SULA (Informasi Statistik Terpadu Kepulauan Sula) adalah sistem yang dirancang untuk memenuhi kebutuhan informasi mengenai Data-Data Strategis di Kabupaten Kabupaten Sula. Sistem ini akan terus disempurnakan, oleh karena itu diharapkan pengguna sistem ini dapat memberi masukan dan melaporkan bug yang ditemui.',
                                       style: mAbsenStyle,
                                       textAlign: TextAlign.justify),
                                 )

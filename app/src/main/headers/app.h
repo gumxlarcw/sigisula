@@ -6,7 +6,7 @@
 
 #include <string>
 
-namespace SIGISULA {
+namespace ISTSULA {
     class Greeter {
         public:
         std::string greeting();
