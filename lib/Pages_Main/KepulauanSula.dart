@@ -744,7 +744,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                 },
                                                 child: Container(
                                                   height: 40,
-                                                  width: 100,
+                                                  width: 150,
                                                   decoration: BoxDecoration(
                                                     borderRadius:
                                                         BorderRadius.circular(
@@ -772,57 +772,57 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                         ],
                                       ),
                                     ),
-                                    Expanded(
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: <Widget>[
-                                          Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            children: <Widget>[
-                                              GestureDetector(
-                                                onTap: () {
-                                                  Navigator.push(
-                                                      context,
-                                                      MaterialPageRoute(
-                                                          builder: (context) =>
-                                                              KepsulPenduduk()));
-                                                },
-                                                child: Container(
-                                                  height: 40,
-                                                  width: 100,
-                                                  decoration: BoxDecoration(
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            5),
-                                                    gradient:
-                                                        LinearGradient(colors: [
-                                                      Colors.deepOrange,
-                                                      Colors.orangeAccent,
-                                                    ]),
-                                                  ),
-                                                  child: Center(
-                                                    child: Text(
-                                                      'Infografis',
-                                                      style: TextStyle(
-                                                          fontSize: 18,
-                                                          color: Colors.white,
-                                                          fontWeight:
-                                                              FontWeight.bold),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
+                                    // Expanded(
+                                    //  child: Row(
+                                    //    mainAxisAlignment:
+                                    //        MainAxisAlignment.center,
+                                    //    crossAxisAlignment:
+                                    //        CrossAxisAlignment.center,
+                                    //    children: <Widget>[
+                                    //     Column(
+                                    //        mainAxisAlignment:
+                                    //            MainAxisAlignment.center,
+                                    //        crossAxisAlignment:
+                                    //            CrossAxisAlignment.center,
+                                    //        children: <Widget>[
+                                    //          GestureDetector(
+                                    //            onTap: () {
+                                    //              Navigator.push(
+                                    //                  context,
+                                    //                  MaterialPageRoute(
+                                    //                      builder: (context) =>
+                                    //                          KepsulPenduduk()));
+                                    //            },
+                                    //            child: Container(
+                                    //              height: 40,
+                                    //             width: 100,
+                                    //              decoration: BoxDecoration(
+                                    //                borderRadius:
+                                    //                    BorderRadius.circular(
+                                    //                       5),
+                                    //                gradient:
+                                    //                   LinearGradient(colors: [
+                                    //                 Colors.deepOrange,
+                                    //                  Colors.orangeAccent,
+                                    //               ]),
+                                    //             ),
+                                    //             child: Center(
+                                    //                child: Text(
+                                    //                  'Infografis',
+                                    //                  style: TextStyle(
+                                    //                      fontSize: 18,
+                                    //                     color: Colors.white,
+                                    //                     fontWeight:
+                                    //                          FontWeight.bold),
+                                    //                ),
+                                    //              ),
+                                    //            ),
+                                    //         ),
+                                    //        ],
+                                    //     ),
+                                    //    ],
+                                    //     ),
+                                    //   ),
                                     Expanded(
                                       child: Row(
                                         mainAxisAlignment:
@@ -846,7 +846,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                 },
                                                 child: Container(
                                                   height: 40,
-                                                  width: 100,
+                                                  width: 150,
                                                   decoration: BoxDecoration(
                                                     borderRadius:
                                                         BorderRadius.circular(
@@ -1120,7 +1120,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                 },
                                                 child: Container(
                                                   height: 40,
-                                                  width: 100,
+                                                  width: 150,
                                                   decoration: BoxDecoration(
                                                     borderRadius:
                                                         BorderRadius.circular(
@@ -1148,57 +1148,55 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                         ],
                                       ),
                                     ),
-                                    Expanded(
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: <Widget>[
-                                          Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            children: <Widget>[
-                                              GestureDetector(
-                                                onTap: () {
-                                                  Navigator.push(
-                                                      context,
-                                                      MaterialPageRoute(
-                                                          builder: (context) =>
-                                                              KepsulPenduduk()));
-                                                },
-                                                child: Container(
-                                                  height: 40,
-                                                  width: 100,
-                                                  decoration: BoxDecoration(
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            5),
-                                                    gradient:
-                                                        LinearGradient(colors: [
-                                                      Colors.deepOrange,
-                                                      Colors.orangeAccent,
-                                                    ]),
-                                                  ),
-                                                  child: Center(
-                                                    child: Text(
-                                                      'Infografis',
-                                                      style: TextStyle(
-                                                          fontSize: 18,
-                                                          color: Colors.white,
-                                                          fontWeight:
-                                                              FontWeight.bold),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
+                                    //     Expanded(
+                                    //        child: Row(
+                                    //          mainAxisAlignment:
+                                    //              MainAxisAlignment.center,
+                                    //          crossAxisAlignment:
+                                    //              CrossAxisAlignment.center,
+                                    //          children: <Widget>[
+                                    //            Column(
+                                    //              mainAxisAlignment:
+                                    //                  MainAxisAlignment.center,
+                                    //             crossAxisAlignment:
+                                    //                  CrossAxisAlignment.center,
+                                    //            children: <Widget>[
+                                    //               GestureDetector(
+                                    //                 onTap: () {
+                                    //                   Navigator.push(
+                                    //                       context,
+                                    //                       MaterialPageRoute(
+                                    //                           builder: (context) =>
+                                    //                               KepsulPenduduk()));
+                                    //                 },
+                                    //                 child: Container(
+                                    //                   height: 40,
+                                    //                  decoration: BoxDecoration(
+                                    //                    borderRadius:
+                                    //                         BorderRadius.circular(
+                                    //                             5),
+                                    //                     gradient:
+                                    //                         LinearGradient(colors: [
+                                    //                       Colors.deepOrange,
+                                    //                      Colors.orangeAccent,
+                                    //                     ]),
+                                    //                  ),
+                                    //                    child: Text(
+                                    //                      'Infografis',
+                                    //                     style: TextStyle(
+                                    //                         fontSize: 18,
+                                    //                         color: Colors.white,
+                                    //                         fontWeight:
+                                    //                              FontWeight.bold),
+                                    //                   ),
+                                    //                   ),
+                                    //                   ),
+                                    //                   ),
+                                    //                ],
+                                    //               ),
+                                    //             ],
+                                    //          ),
+                                    //         ),
                                     Expanded(
                                       child: Row(
                                         mainAxisAlignment:
@@ -1222,7 +1220,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                 },
                                                 child: Container(
                                                   height: 40,
-                                                  width: 100,
+                                                  width: 150,
                                                   decoration: BoxDecoration(
                                                     borderRadius:
                                                         BorderRadius.circular(
@@ -1496,7 +1494,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                 },
                                                 child: Container(
                                                   height: 40,
-                                                  width: 100,
+                                                  width: 150,
                                                   decoration: BoxDecoration(
                                                     borderRadius:
                                                         BorderRadius.circular(
@@ -1524,57 +1522,57 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                         ],
                                       ),
                                     ),
-                                    Expanded(
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: <Widget>[
-                                          Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            children: <Widget>[
-                                              GestureDetector(
-                                                onTap: () {
-                                                  Navigator.push(
-                                                      context,
-                                                      MaterialPageRoute(
-                                                          builder: (context) =>
-                                                              KepsulPenduduk()));
-                                                },
-                                                child: Container(
-                                                  height: 40,
-                                                  width: 100,
-                                                  decoration: BoxDecoration(
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            5),
-                                                    gradient:
-                                                        LinearGradient(colors: [
-                                                      Colors.deepOrange,
-                                                      Colors.orangeAccent,
-                                                    ]),
-                                                  ),
-                                                  child: Center(
-                                                    child: Text(
-                                                      'Infografis',
-                                                      style: TextStyle(
-                                                          fontSize: 18,
-                                                          color: Colors.white,
-                                                          fontWeight:
-                                                              FontWeight.bold),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
+                                    //              Expanded(
+                                    //                child: Row(
+                                    //                 mainAxisAlignment:
+                                    //                     MainAxisAlignment.center,
+                                    //                 crossAxisAlignment:
+                                    //                     CrossAxisAlignment.center,
+                                    //                 children: <Widget>[
+                                    //                   Column(
+                                    //                    mainAxisAlignment:
+                                    //                       MainAxisAlignment.center,
+                                    //                   crossAxisAlignment:
+                                    //                      CrossAxisAlignment.center,
+                                    //                  children: <Widget>[
+                                    //                    GestureDetector(
+                                    //                      onTap: () {
+                                    //                        Navigator.push(
+                                    //                           context,
+                                    //                           MaterialPageRoute(
+                                    //                               builder: (context) =>
+                                    //                                    KepsulPenduduk()));
+                                    //                      },
+                                    //                      child: Container(
+                                    //                        height: 40,
+                                    //                        width: 100,
+                                    //                        decoration: BoxDecoration(
+                                    //                          borderRadius:
+                                    //                              BorderRadius.circular(
+                                    //                                  5),
+                                    //                          gradient:
+                                    //                               LinearGradient(colors: [
+                                    //                             Colors.deepOrange,
+                                    //                             Colors.orangeAccent,
+                                    //                           ]),
+                                    //                        ),
+                                    //                        child: Center(
+                                    //                          child: Text(
+                                    //                            'Infografis',
+                                    //                            style: TextStyle(
+                                    //                               fontSize: 18,
+                                    //                                color: Colors.white,
+                                    //                                fontWeight:
+                                    //                                    FontWeight.bold),
+                                    //                         ),
+                                    //                       ),
+                                    //                     ),
+                                    //                   ),
+                                    //                 ],
+                                    //               ),
+                                    //             ],
+                                    //           ),
+                                    //         ),
                                     Expanded(
                                       child: Row(
                                         mainAxisAlignment:
@@ -1598,7 +1596,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                 },
                                                 child: Container(
                                                   height: 40,
-                                                  width: 100,
+                                                  width: 150,
                                                   decoration: BoxDecoration(
                                                     borderRadius:
                                                         BorderRadius.circular(
@@ -1872,7 +1870,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                 },
                                                 child: Container(
                                                   height: 40,
-                                                  width: 100,
+                                                  width: 150,
                                                   decoration: BoxDecoration(
                                                     borderRadius:
                                                         BorderRadius.circular(
@@ -1900,57 +1898,57 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                         ],
                                       ),
                                     ),
-                                    Expanded(
-                                      child: Row(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.center,
-                                        children: <Widget>[
-                                          Column(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            children: <Widget>[
-                                              GestureDetector(
-                                                onTap: () {
-                                                  Navigator.push(
-                                                      context,
-                                                      MaterialPageRoute(
-                                                          builder: (context) =>
-                                                              DataGrid_IndeksPembangunanManusia()));
-                                                },
-                                                child: Container(
-                                                  height: 40,
-                                                  width: 100,
-                                                  decoration: BoxDecoration(
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            5),
-                                                    gradient:
-                                                        LinearGradient(colors: [
-                                                      Colors.deepOrange,
-                                                      Colors.orangeAccent,
-                                                    ]),
-                                                  ),
-                                                  child: Center(
-                                                    child: Text(
-                                                      'Infografis',
-                                                      style: TextStyle(
-                                                          fontSize: 18,
-                                                          color: Colors.white,
-                                                          fontWeight:
-                                                              FontWeight.bold),
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
+                                    //         Expanded(
+                                    //           child: Row(
+                                    //              mainAxisAlignment:
+                                    //                 MainAxisAlignment.center,
+                                    //             crossAxisAlignment:
+                                    //                 CrossAxisAlignment.center,
+                                    //              children: <Widget>[
+                                    //                Column(
+                                    //                  mainAxisAlignment:
+                                    //                     MainAxisAlignment.center,
+                                    //                 crossAxisAlignment:
+                                    //                      CrossAxisAlignment.center,
+                                    //                 children: <Widget>[
+                                    //                    GestureDetector(
+                                    //                      onTap: () {
+                                    //                        Navigator.push(
+                                    //                            context,
+                                    //                            MaterialPageRoute(
+                                    //                                builder: (context) =>
+                                    //                                    DataGrid_IndeksPembangunanManusia()));
+                                    //                      },
+                                    //                      child: Container(
+                                    //                        height: 40,
+                                    //                       width: 100,
+                                    //                        decoration: BoxDecoration(
+                                    //                         borderRadius:
+                                    //                             BorderRadius.circular(
+                                    //                                 5),
+                                    //                         gradient:
+                                    //                             LinearGradient(colors: [
+                                    //                          Colors.deepOrange,
+                                    //                           Colors.orangeAccent,
+                                    //                         ]),
+                                    //                      ),
+                                    //                      child: Center(
+                                    //                        child: Text(
+                                    //                          'Infografis',
+                                    //                          style: TextStyle(
+                                    //                              fontSize: 18,
+                                    //                              color: Colors.white,
+                                    //                              fontWeight:
+                                    //                                  FontWeight.bold),
+                                    //                        ),
+                                    //                      ),
+                                    //                    ),
+                                    //                  ),
+                                    //                ],
+                                    //              ),
+                                    //            ],
+                                    //          ),
+                                    //       ),
                                     Expanded(
                                       child: Row(
                                         mainAxisAlignment:
@@ -1974,7 +1972,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
                                                 },
                                                 child: Container(
                                                   height: 40,
-                                                  width: 100,
+                                                  width: 150,
                                                   decoration: BoxDecoration(
                                                     borderRadius:
                                                         BorderRadius.circular(

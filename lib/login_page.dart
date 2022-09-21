@@ -21,17 +21,17 @@ class LoginPage extends StatelessWidget {
               ),
               SizedBox(height: 50),
               SizedBox(
-                height: 35,
+                height: 30,
                 child: DefaultTextStyle(
                   style: TextStyle(
                       color: Colors.deepOrangeAccent,
-                      fontSize: 30,
+                      fontSize: 23,
                       fontWeight: FontWeight.w900),
                   child: AnimatedTextKit(
                     repeatForever: true,
                     animatedTexts: [
-                      WavyAnimatedText('DATA STRATEGIS SULA'),
-                      WavyAnimatedText('DATA STRATEGIS SULA'),
+                      WavyAnimatedText('INFORMASI STATISTIK TERPADU'),
+                      WavyAnimatedText('INFORMASI STATISTIK TERPADU'),
                     ],
                   ),
                 ),
@@ -39,7 +39,7 @@ class LoginPage extends StatelessWidget {
               Container(
                 margin: EdgeInsets.only(top: 10),
                 child: Text(
-                  'Memuat indikator-indikator strategis di Kabupaten Kepulauan Sula',
+                  'Memuat informasi indikator strategis di Kabupaten Kepulauan Sula',
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 12,
