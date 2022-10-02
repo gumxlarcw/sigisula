@@ -6,12 +6,12 @@
 #include <stdlib.h>
 #include "app.h"
 
-std::string SIGISULA::Greeter::greeting() {
+std::string ISTSULA::Greeter::greeting() {
     return std::string("Hello, World!");
 }
 
 int main () {
-    SIGISULA::Greeter greeter;
+    ISTSULA::Greeter greeter;
     std::cout << greeter.greeting() << std::endl;
     return 0;
 }

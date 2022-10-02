@@ -17,7 +17,7 @@ class _AboutScreenState extends State<AboutScreen> {
             style: GoogleFonts.publicSans(
                 textStyle:
                     TextStyle(fontSize: 30, fontWeight: FontWeight.bold))),
-        backgroundColor: Colors.lightBlueAccent,
+        backgroundColor: Colors.deepOrangeAccent,
         centerTitle: true,
         automaticallyImplyLeading: false,
       ),
