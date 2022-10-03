@@ -9,7 +9,7 @@ List<BoxShadow> customShadow = [
       offset: Offset(-5, -5),
       blurRadius: 30),
   BoxShadow(
-      color: Color.fromARGB(255, 212, 132, 11)!.withOpacity(.2),
+      color: Color.fromARGB(255, 212, 132, 11).withOpacity(.2),
       spreadRadius: 2,
       offset: Offset(7, 7),
       blurRadius: 20)
