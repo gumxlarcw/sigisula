@@ -32,7 +32,7 @@ class _KepulauanSulaState extends State<KepulauanSula> {
     ];
     return Scaffold(
       appBar: AppBar(
-        title: Text('Kepulauan Sula',
+        title: Text('Indikator Strategis',
             style: GoogleFonts.publicSans(
                 textStyle:
                     TextStyle(fontSize: 30, fontWeight: FontWeight.bold))),
