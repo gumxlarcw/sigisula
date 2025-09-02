@@ -13,15 +13,17 @@ Proyek ini menyertakan struktur proyek Flutter standar, siap untuk dikembangkan 
 
 ## 🗂️ Struktur Direktori
 
-├── android/ # Kode spesifik Android
-├── ios/ # Kode spesifik iOS
-├── lib/ # Kode sumber utama Flutter (Dart)
-├── assets/ # Berkas statis (gambar, font, dll.)
-├── test/ # Unit tests
-├── pubspec.yaml # Deklarasi dependencies & assets
-├── pubspec.lock # Versi terkunci dependencies
-├── .vscode/ # Konfigurasi editor VSCode (opsional)
+```
+├── android/        # Kode spesifik Android
+├── ios/            # Kode spesifik iOS
+├── lib/            # Kode sumber utama Flutter (Dart)
+├── assets/         # Berkas statis (gambar, font, dll.)
+├── test/           # Unit tests
+├── pubspec.yaml    # Deklarasi dependencies & assets
+├── pubspec.lock    # Versi terkunci dependencies
+├── .vscode/        # Konfigurasi editor VSCode (opsional)
 └── .gitignore, gradlew, LICENSE, README.md, dll.
+```
 
 ---
 
@@ -37,23 +39,29 @@ Proyek ini menyertakan struktur proyek Flutter standar, siap untuk dikembangkan 
 ## 🛠️ Cara Menjalankan Proyek
 
 1. **Clone repository ini**
+   ```bash
    git clone https://github.com/gumxlarcw/sigisula.git
    cd sigisula
+   ```
 
 2. **Install dependencies**
+   ```bash
    flutter pub get
+   ```
 
 3. **Jalankan di emulator atau perangkat fisik**
+   ```bash
    flutter run
+   ```
 
 ---
 
 ## 🔧 Rekomendasi Pengembangan
 
-- State Management: Provider, Riverpod, GetX, atau Bloc.  
-- Routing: go_router, auto_route untuk navigasi kompleks.  
-- Testing: Tambahkan Unit Test & Widget Test di folder test/.  
-- CI/CD: Integrasi dengan GitHub Actions atau Codemagic untuk otomatisasi build.  
+- **State Management:** Provider, Riverpod, GetX, atau Bloc.  
+- **Routing:** go_router, auto_route untuk navigasi kompleks.  
+- **Testing:** Tambahkan Unit Test & Widget Test di folder `test/`.  
+- **CI/CD:** Integrasi dengan GitHub Actions atau Codemagic untuk otomatisasi build.  
 
 ---
 
@@ -61,11 +69,20 @@ Proyek ini menyertakan struktur proyek Flutter standar, siap untuk dikembangkan 
 
 Kontribusi selalu terbuka!  
 Langkahnya:
-- Fork repository ini.  
-- Buat branch baru (`git checkout -b fitur-anda`).  
-- Commit perubahan (`git commit -m 'Tambah fitur'`).  
-- Push branch ke GitHub (`git push origin fitur-anda`).  
-- Buat Pull Request di repo utama.  
+1. Fork repository ini.  
+2. Buat branch baru:
+   ```bash
+   git checkout -b fitur-anda
+   ```
+3. Commit perubahan:
+   ```bash
+   git commit -m "Tambah fitur"
+   ```
+4. Push branch ke GitHub:
+   ```bash
+   git push origin fitur-anda
+   ```
+5. Buat Pull Request di repo utama.  
 
 ---
 
