@@ -23,9 +23,6 @@ Proyek ini menyertakan struktur proyek Flutter standar, siap untuk dikembangkan 
 ├── .vscode/ # Konfigurasi editor VSCode (opsional)
 └── .gitignore, gradlew, LICENSE, README.md, dll.
 
-yaml
-Copy code
-
 ---
 
 ## ✨ Fitur Utama
@@ -40,52 +37,50 @@ Copy code
 ## 🛠️ Cara Menjalankan Proyek
 
 1. **Clone repository ini**
-   ```bash
    git clone https://github.com/gumxlarcw/sigisula.git
    cd sigisula
-Install dependencies
 
-bash
-Copy code
-flutter pub get
-Jalankan di emulator atau perangkat fisik
+2. **Install dependencies**
+   flutter pub get
 
-bash
-Copy code
-flutter run
-🔧 Rekomendasi Pengembangan
-State Management: Provider, Riverpod, GetX, atau Bloc.
+3. **Jalankan di emulator atau perangkat fisik**
+   flutter run
 
-Routing: go_router, auto_route untuk navigasi kompleks.
+---
 
-Testing: Tambahkan Unit Test & Widget Test di folder test/.
+## 🔧 Rekomendasi Pengembangan
 
-CI/CD: Integrasi dengan GitHub Actions atau Codemagic untuk otomatisasi build.
+- State Management: Provider, Riverpod, GetX, atau Bloc.  
+- Routing: go_router, auto_route untuk navigasi kompleks.  
+- Testing: Tambahkan Unit Test & Widget Test di folder test/.  
+- CI/CD: Integrasi dengan GitHub Actions atau Codemagic untuk otomatisasi build.  
 
-🤝 Kontribusi
-Kontribusi selalu terbuka!
+---
+
+## 🤝 Kontribusi
+
+Kontribusi selalu terbuka!  
 Langkahnya:
+- Fork repository ini.  
+- Buat branch baru (`git checkout -b fitur-anda`).  
+- Commit perubahan (`git commit -m 'Tambah fitur'`).  
+- Push branch ke GitHub (`git push origin fitur-anda`).  
+- Buat Pull Request di repo utama.  
 
-Fork repository ini.
+---
 
-Buat branch baru (git checkout -b fitur-anda).
+## 📜 Lisensi
 
-Commit perubahan (git commit -m 'Tambah fitur').
-
-Push branch ke GitHub (git push origin fitur-anda).
-
-Buat Pull Request di repo utama.
-
-📜 Lisensi
-Proyek ini belum memiliki lisensi resmi.
+Proyek ini belum memiliki lisensi resmi.  
 Tambahkan file LICENSE sesuai kebutuhan (MIT, Apache 2.0, dll).
 
-⭐ Dukung Proyek Ini!
+---
+
+## ⭐ Dukung Proyek Ini!
+
 Jika kamu suka dengan proyek ini:
+- Beri Star ⭐ di repo ini.  
+- Bagikan ke teman atau komunitas Flutter!
 
-Beri Star ⭐ di repo ini.
-
-Bagikan ke teman atau komunitas Flutter!
-
-Happy Coding with Flutter! 🎨
+Happy Coding with Flutter! 🎨  
 Bangun aplikasi hebat dengan dasar yang solid 🚀
